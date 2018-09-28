@@ -27,7 +27,7 @@ client.on("message", (message) => {
     case 'asl' :
       let [age, sex, location] = args;
       
-      message.reply(`Hello ${message.author.username}, you are a ${age} year old ${sex} from ${location}`);
+      message.reply(`Hello ${message.author.username}, you are a ${age} year old ${sex}, from ${location}`);
       break;
       
       case 'say' :
