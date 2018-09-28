@@ -5,9 +5,17 @@ client.on("ready", () => {
   console.log("I am ready!");
 });
 
+const prefix = "!";
+
 client.on("message", (message) => {
-  if (message.content.startsWith("ping")) {
+  
+  if (!message.content.startsWith(prefix) || message.author.bot) return;
+  
+  if (message.content.toUpperCase().startsWith(prefix + "PING")) {
     message.channel.send("pong!");
+  } else
+  if (message.content.toUpperCase().startsWith(prefix + "FOO")){
+    message.channel.send("bar");
   }
 });
 
